@@ -1,0 +1,18 @@
+<?php
+$configData = array(
+  'faucet' => array(
+    'timePerIP' => 86400,
+    'timePerAddress' => 86400,
+    'amountToSendLow' => 100000000,
+    'amountToSendHigh' => 300000000,
+  ),
+  'burst' => array(
+    'secretPhrase' => 'your really long passpharse to access the faucet wallet',
+    'deadline' => 1440,
+    'feeNQT' => 100000000,
+  ),
+  'recaptcha' => array(
+    'public' => 'recaptcha public key',
+    'private' => 'recaptcha private key',
+  )
+);
