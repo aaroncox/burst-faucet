@@ -12,7 +12,7 @@
 
       <div class="uk-width-1-1 uk-text-center">
         <h1 class="uk-heading-large">Burstcoin Faucet</h1>
-        <p class="uk-text-large uk-margin-large-bottom">Enter your burstcoin address to get between 1 and 3 burst for free.</p>
+        <p class="uk-text-large uk-margin-large-bottom">Fill out the Captcha and enter your burstcoin address to get between 1 and 3 burst for free.</p>
       </div>
 
       <div class="uk-width-2-6 uk-push-1-6">
