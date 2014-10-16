@@ -66,4 +66,8 @@ $app->setDI($di);
 
 require_once(APPLICATION_PATH . "/routes.php");
 
-$app->handle();
+try {
+  $app->handle();
+} catch (\Exception $e) {
+  echo $e->getMessage();
+}
