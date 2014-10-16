@@ -69,5 +69,7 @@ require_once(APPLICATION_PATH . "/routes.php");
 try {
   $app->handle();
 } catch (\Exception $e) {
-  echo $e->getMessage();
+  echo $app->view->render('default/500', array(
+    'error' => $e->getMessage()
+  ));
 }

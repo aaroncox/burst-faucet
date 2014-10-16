@@ -6,15 +6,6 @@
 
     <div class="uk-grid uk-container-center">
 
-      <div class="uk-width-1-1 uk-text-center">
-        <h1 class=""></h1>
-      </div>
-
-      <div class="uk-width-1-1 uk-text-center">
-        <h1 class="uk-heading-large">Burstcoin Faucet</h1>
-        <p class="uk-text-large uk-margin-large-bottom">Fill out the Captcha and enter your burstcoin address to get between 1 and 3 burst for free.</p>
-      </div>
-
       <div class="uk-width-2-6 uk-push-1-6">
         {{ recaptcha_get_html(config.recaptcha.public) }}
       </div>
@@ -34,14 +25,24 @@
 
       </div>
 
-      <div class="uk-width-4-6 uk-pull-1-6 uk-text-center">
-        <h2 class="uk-margin-large-top">This faucet runs on donations!</h2>
-        <p class="uk-text-large uk-margin-large-bottom">This faucet is for those who need a little burst to get started. If you'd like to donate to the pool, please send burst to:</p>
-        <h3>BURST-2XL5-BHKS-QVNM-2QYJC</h3>
-      </div>
-
     </div>
 
   </form>
+
+  <div class="uk-grid uk-container-center">
+
+    <div class="uk-width-2-6 uk-push-1-6 uk-text-center">
+      <h2 class="uk-margin-large-top">This faucet runs on donations!</h2>
+      <p class="uk-text-large">This faucet is for those who need a little burst to get started. If you'd like to donate to the faucet, please send burst to:</p>
+      <h3 class="uk-panel uk-panel-box">{{ config.faucet.address }}</h3>
+    </div>
+
+    <div class="uk-width-2-6 uk-push-1-6 uk-text-center">
+      <h2 class="uk-margin-large-top">Current Balance</h2>
+      <p class="uk-text-large">Below is the current balance of the faucet and if you'd like to see all of it's transaction history visit the <a href="http://burst.cryptoport.io/acc/BURST-2XL5-BHKS-QVNM-2QYJC">Burst Block Explorer</a>.</p>
+      <h3 class="uk-panel uk-panel-box">{{ balance }} BURST</h3>
+    </div>
+
+  </div>
 
 {% endblock %}

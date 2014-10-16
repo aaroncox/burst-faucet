@@ -4,7 +4,11 @@ function get_ip_address() { foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_F
 
 $app->get('/', function() use($app) {
   // Render out the HTML
-  echo $app->view->render('default/index');
+  $burst = new Burst_Api();
+  $balance = $burst->getBalance(['account' => $app->config->faucet->address]);
+  echo $app->view->render('default/index', array(
+    'balance' => round($balance->balanceNQT / 100000000, 3)
+  ));
 });
 
 $app->post('/', function() use($app) {
