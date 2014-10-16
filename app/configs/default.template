@@ -5,6 +5,7 @@ $configData = array(
     'timePerAddress' => 86400,
     'amountToSendLow' => 100000000,
     'amountToSendHigh' => 300000000,
+    'address' => 'BURST-XXXX-XXXX-XXXX-XXXXX',
   ),
   'burst' => array(
     'secretPhrase' => 'your really long passpharse to access the faucet wallet',
