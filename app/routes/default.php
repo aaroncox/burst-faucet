@@ -7,7 +7,7 @@ $app->get('/', function() use($app) {
   $burst = new Burst_Api();
   $balance = $burst->getBalance(['account' => $app->config->faucet->address]);
   echo $app->view->render('default/index', array(
-    'balance' => (int) $balance->balanceNQT / 100000000,
+    'balance' => (int) ($balance->balanceNQT / 100000000),
   ));
 });
 
@@ -44,7 +44,7 @@ $app->post('/', function() use($app) {
 
   // Determine how much to send
   $amountToSend = rand($app->config->faucet->amountToSendLow, $app->config->faucet->amountToSendHigh);
-  
+
   // Process the Request
   $burst = new Burst_Api();
   $data = array(
