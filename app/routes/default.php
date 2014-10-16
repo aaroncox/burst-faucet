@@ -71,3 +71,9 @@ $app->post('/', function() use($app) {
     'timePerAddress' => $app->config->faucet->timePerAddress / 86400,
   ));
 });
+
+$app->get('/burst/status', function() use($app) {
+  $burst = new Burst_Api();
+  echo "<pre>";
+  var_dump($burst->getState());
+});
