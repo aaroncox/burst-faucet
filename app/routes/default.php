@@ -43,8 +43,8 @@ $app->post('/', function() use($app) {
   }
 
   // Determine how much to send
-  $amountToSend = rand($app->config->faucet->amountToSendLow, $app->config->faucet->amountToSendHigh) * 100000000;
-
+  $amountToSend = rand($app->config->faucet->amountToSendLow, $app->config->faucet->amountToSendHigh);
+  
   // Process the Request
   $burst = new Burst_Api();
   $data = array(
@@ -52,7 +52,7 @@ $app->post('/', function() use($app) {
     'deadline' => $app->config->burst->deadline,
     'secretPhrase' => $app->config->burst->secretPhrase,
     'feeNQT' => $app->config->burst->feeNQT,
-    'amountNQT' => $amountToSend,
+    'amountNQT' => $amountToSend * 100000000,
   );
   $response = $burst->sendMoney($data);
 

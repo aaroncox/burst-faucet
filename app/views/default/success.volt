@@ -3,7 +3,7 @@
 {% block content %}
   <div class="uk-grid uk-container-center">
 
-    <div class="uk-width-2-6 uk-push-1-6">
+    <div class="uk-width-4-6 uk-push-1-6">
 
       <div class="uk-alert uk-alert-success uk-alert-large uk-responsive-width">
 
