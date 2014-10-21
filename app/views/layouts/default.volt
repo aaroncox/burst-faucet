@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Burstcoin Faucet - burstcoin.info</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.almost-flat.min.css">
   </head>
