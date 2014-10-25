@@ -39,7 +39,13 @@
 
     <div class="uk-width-4-10 uk-push-1-10 uk-text-center">
       <h2 class="uk-margin-large-top">Current Balance</h2>
-      <p class="uk-text-large">Below is the current balance of the faucet and if you'd like to see all of it's transaction history visit the <a href="http://burst.cryptoport.io/acc/BURST-2XL5-BHKS-QVNM-2QYJC">Block Explorer</a>.</p>
+      <p class="uk-text-large">Below is the current balance of the faucet and if you'd like to see all of it's transaction history visit the <a href="http://burstcoin.eu/address/379382415056991811">Block Explorer</a>.</p>
+      <h3 class="uk-panel uk-panel-box">{{ balance }} BURST</h3>
+    </div>
+
+    <div class="uk-width-6-10 uk-push-3-10 uk-text-center">
+      <h2 class="uk-margin-large-top">Need a BURST Wallet?</h2>
+      <p class="uk-text-large">You can start one for free here (<a href="https://burstcoin.io/index.html">burstcoin.io</a>) to try it out and for plenty more information check out the <a href="https://bitcointalk.org/index.php?topic=731923.0">announcement thread</a> on <a href="https://bitcointalk.org">bitcointalk.org</a></p>
       <h3 class="uk-panel uk-panel-box">{{ balance }} BURST</h3>
     </div>
 
