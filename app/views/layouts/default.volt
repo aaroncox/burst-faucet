@@ -4,6 +4,11 @@
     <title>Burstcoin Faucet - burstcoin.info</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.almost-flat.min.css">
+    <style>
+      a {
+        color: #2ecc71;
+      }
+    </style>
   </head>
   <body>
     <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
