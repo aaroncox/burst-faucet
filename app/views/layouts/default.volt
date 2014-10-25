@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Burstcoin Faucet - burstcoin.info</title>
+    <title>BURST Faucet - burstcoin.info</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.11.1/css/uikit.almost-flat.min.css">
     <style>
       a {
         color: #2ecc71;
+      }
+      a:hover {
+        color: #27ae60;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -15,8 +19,8 @@
       <div class="uk-grid">
 
         <div class="uk-width-1-1 uk-text-center">
-          <h1 class="uk-heading-large">Burstcoin Faucet</h1>
-          <p class="uk-text-large uk-margin-large-bottom">Fill out the Captcha and enter your burstcoin address to get between {{ config.faucet.amountToSendLow }} and {{ config.faucet.amountToSendHigh }} burst for free.</p>
+          <h1 class="uk-heading-large">BURST Faucet</h1>
+          <p class="uk-text-large uk-margin-large-bottom">Fill out the Captcha and enter your BURST address to get between {{ config.faucet.amountToSendLow }} and {{ config.faucet.amountToSendHigh }} BURST for free.</p>
         </div>
 
       </div>
