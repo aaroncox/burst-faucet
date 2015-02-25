@@ -6,6 +6,16 @@ $app->get('/', function() use($app) {
   // Render out the HTML
   $burst = new Burst_Api();
   $balance = $burst->getBalance(['account' => $app->config->faucet->address]);
+
+  // Attempt to retreive the user's IP address
+  $ipaddress = get_ip_address();
+
+  // Ensure it's not a TOR address
+  $ips = explode("\n", file_get_contents(APPLICATION_PATH . '/storage/tor.csv'));
+  if (in_array($ipaddress, $ips)) {
+    echo 'Please do not use Tor to access this website.'; die;
+  }
+
   echo $app->view->render('default/index', array(
     'balance' => (int) ($balance->balanceNQT / 100000000),
   ));
@@ -18,6 +28,12 @@ $app->post('/', function() use($app) {
 
   // Attempt to retreive the user's IP address
   $ipaddress = get_ip_address();
+
+  // Ensure it's not a TOR address
+  $ips = explode("\n", file_get_contents(APPLICATION_PATH . '/storage/tor.csv'));
+  if (in_array($_SERVER['REMOTE_ADDR'], $ips)) {
+    echo 'Please do not use Tor to access this website.'; die;
+  }
 
   // Check against the CAPTCHA field
   $challenge = $app->request->get('recaptcha_challenge_field');
