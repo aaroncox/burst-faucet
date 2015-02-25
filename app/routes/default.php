@@ -13,7 +13,7 @@ $app->get('/', function() use($app) {
   // Ensure it's not a TOR address
   $ips = explode("\n", file_get_contents(APPLICATION_PATH . '/storage/tor.csv'));
   if (in_array($ipaddress, $ips)) {
-    echo 'Please do not use Tor to access this website.'; die;
+    throw new Exception('Please do not use Tor to access this website.');
   }
 
   echo $app->view->render('default/index', array(
@@ -32,7 +32,7 @@ $app->post('/', function() use($app) {
   // Ensure it's not a TOR address
   $ips = explode("\n", file_get_contents(APPLICATION_PATH . '/storage/tor.csv'));
   if (in_array($_SERVER['REMOTE_ADDR'], $ips)) {
-    echo 'Please do not use Tor to access this website.'; die;
+    throw new Exception('Please do not use Tor to access this website.');
   }
 
   // Check against the CAPTCHA field
